@@ -12,15 +12,16 @@ const Card = () => {
     });
   }, []);
   return (
-    <div className="card">
-      Movies and TV Shows
-      <ul>
-        {shows.map((show) => (
-          <li key={show.id}>
-            <p>{show.original_title}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="card-group">
+      {shows.map((show) => {
+        <div className="card">
+          <img src={show.backdrop_path} alt="" className="card-img-top" />
+          <div className="card-body">
+            <h5 className="card-title">{show.title}</h5>
+            <p className="card-text">{show.overview}</p>
+          </div>
+        </div>;
+      })}
     </div>
   );
 };

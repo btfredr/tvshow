@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "./components/Card";
 
 function App() {
-  const [show, setShow] = useState([]);
-
-  const getShows = () => {};
-
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Card />
+    </div>
+  );
 }
 
 export default App;
