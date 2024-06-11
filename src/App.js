@@ -19,18 +19,26 @@ function App() {
 
   return (
     <div className="App">
-      <div className="card-group">
-        {shows.map((show) => {
-          return (
-            <div className="card" key={show.id}>
-              <img src={show.poster_path} alt="" className="card-img-top" />
-              <div className="card-body">
-                <h5 className="card-title">{show.title}</h5>
-                <p className="card-text">{show.overview}</p>
-              </div>
-            </div>
-          );
-        })}
+      <div className="container">
+        <div className="card-group">
+          <div className="row">
+            {shows.map((show) => {
+              return (
+                <div className="card" key={show.id}>
+                  <img
+                    src={`http://image.tmdb.org/t/p/w500/${show.poster_path}`}
+                    alt=""
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{show.title}</h5>
+                    <p className="card-text">{show.overview}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
