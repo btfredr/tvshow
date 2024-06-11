@@ -15,7 +15,7 @@ const Card = () => {
     <div className="card-group">
       {shows.map((show) => {
         <div className="card">
-          <img src={show.backdrop_path} alt="" className="card-img-top" />
+          <img src={show.poster_path} alt="" className="card-img-top" />
           <div className="card-body">
             <h5 className="card-title">{show.title}</h5>
             <p className="card-text">{show.overview}</p>
